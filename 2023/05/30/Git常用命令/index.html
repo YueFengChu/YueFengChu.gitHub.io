@@ -6,19 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="Git常用命令 | 胳膊太细睡不着">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Git常用命令经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络） 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。  git常用命令 下面整理的 Git 命令清单。几个专业名词的译名如下。 1234Workspace：工作区Index &#x2F; Stage：暂存区Repository：仓库区（本地仓库）Remote：远程仓库  新建版本仓库">
+<meta name="description" content="Linux中配置java 环境 1.配置jdk ​	把jdk包放到Linux某个路径下，我存放的路径是&#x2F;usr&#x2F;local&#x2F;src，然后使用命令进行解压 1&#x2F;&#x2F;解压命令 tar zxvf jdk-8u181-linux-x64.tar.gz  解压之后 使用命令 vi &#x2F;etc&#x2F;profile   进入到这个文件中进行jdk的配置 1234567&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令">
-<meta property="og:url" content="http://example.com/2023/05/28/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="配置linux jdk环境">
+<meta property="og:url" content="http://example.com/2023/06/02/%E8%BF%90%E7%BB%B4/Linux%E4%B8%AD%E9%85%8D%E7%BD%AEjDK%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="胳膊太细睡不着">
-<meta property="og:description" content="Git常用命令经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络） 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。  git常用命令 下面整理的 Git 命令清单。几个专业名词的译名如下。 1234Workspace：工作区Index &#x2F; Stage：暂存区Repository：仓库区（本地仓库）Remote：远程仓库  新建版本仓库">
+<meta property="og:description" content="Linux中配置java 环境 1.配置jdk ​	把jdk包放到Linux某个路径下，我存放的路径是&#x2F;usr&#x2F;local&#x2F;src，然后使用命令进行解压 1&#x2F;&#x2F;解压命令 tar zxvf jdk-8u181-linux-x64.tar.gz  解压之后 使用命令 vi &#x2F;etc&#x2F;profile   进入到这个文件中进行jdk的配置 1234567&#x2F;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://img.saodiyang.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png">
-<meta property="article:published_time" content="2023-05-28T14:30:26.000Z">
-<meta property="article:modified_time" content="2023-05-30T09:42:06.044Z">
+<meta property="article:published_time" content="2023-06-02T07:48:06.575Z">
+<meta property="article:modified_time" content="2023-06-02T07:55:01.019Z">
 <meta property="article:author" content="胳膊太细睡不着">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://img.saodiyang.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -365,66 +363,66 @@
     <nav id="title-list-nav">
         
         
-        <a id="top" class="全部文章 运维 "
-           href="/2023/05/28/myPage/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="myPage">myPage</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
-        </a>
-        
-        
-        <a  class="全部文章 Git "
-           href="/2023/05/28/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Git常用命令">Git常用命令</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
-        </a>
-        
-        
-        <a  class="全部文章 Git "
-           href="/2023/05/28/Git%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Git统计操作">Git统计操作</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/05/28/JAVA%20base64%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="JAVA base64加密解密工具类">JAVA base64加密解密工具类</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/05/28/JAVA%20%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2%E4%B9%8B%E9%97%B4%E5%B7%A5%E5%85%B7%E7%B1%BB/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="JAVA 日期之间转换工具类">JAVA 日期之间转换工具类</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
-        </a>
-        
-        
-        <a  class="全部文章 "
-           href="/2023/05/28/myBlogIntroduce/"
+        <a id="top" class="全部文章 "
+           href="/2023/05/31/myBlogIntroduce/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="我的博客介绍">我的博客介绍</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
+            <span class="post-date" title="2023-05-31 17:06:29">2023/05/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2023/06/02/%E8%BF%90%E7%BB%B4/Linux%E4%B8%AD%E9%85%8D%E7%BD%AEjDK%E7%8E%AF%E5%A2%83/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="配置linux jdk环境">配置linux jdk环境</span>
+            <span class="post-date" title="2023-06-02 15:48:06">2023/06/02</span>
         </a>
         
         
         <a  class="全部文章 后端 "
-           href="/2023/05/28/JAVA%20%E9%80%9A%E7%94%A8%E5%B8%B8%E9%87%8F/"
+           href="/2023/05/31/%E5%90%8E%E7%AB%AF/JAVA%20%E9%80%9A%E7%94%A8%E5%B8%B8%E9%87%8F/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="java通用常量">java通用常量</span>
-            <span class="post-date" title="2023-05-28 22:30:26">2023/05/28</span>
+            <span class="post-date" title="2023-05-31 16:39:38">2023/05/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2023/05/30/%E5%90%8E%E7%AB%AF/JAVA%20%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2%E4%B9%8B%E9%97%B4%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JAVA 日期之间转换工具类">JAVA 日期之间转换工具类</span>
+            <span class="post-date" title="2023-05-30 17:46:38">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2023/05/30/JAVA%20base64%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JAVA base64加密解密工具类">JAVA base64加密解密工具类</span>
+            <span class="post-date" title="2023-05-30 17:42:35">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 Git "
+           href="/2023/05/30/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git常用命令">Git常用命令</span>
+            <span class="post-date" title="2023-05-30 17:37:33">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 Git "
+           href="/2023/05/30/Git%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git统计操作">Git统计操作</span>
+            <span class="post-date" title="2023-05-30 17:32:44">2023/05/30</span>
         </a>
         
         <div id="no-item-tips">
@@ -465,7 +463,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-05-30 17:42:06'>2023-05-28 22:30</time>
+            发布时间 : <time class="date" title='最后更新: 2023-06-02 15:55:58'>2023-05-30 17:37</time>
         
     </div>
     <div class="article-meta">
