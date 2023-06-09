@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JAVA base64加密解密工具类 | 胳膊太细睡不着</title>
+  <title>mysql遇到的问题 以及解决方法 | 胳膊太细睡不着</title>
   <meta name="keywords" content="">
-  <meta name="description" content="JAVA base64加密解密工具类 | 胳膊太细睡不着">
+  <meta name="description" content="mysql遇到的问题 以及解决方法 | 胳膊太细睡不着">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="问题1：MySQL    数据库的my.ini 中max_allowed_packet参数值过小文件值过大   解决：去my.ini 中修改max_allowed_packet其值   修改成  1024×1024×1024 问题2：mysql 5.7.5版本之后的GROUP by  严谨的问题 解决： 修改  my.ini 文件的sql_code 参数为  STRICT_TRANS_TABLES">
 <meta property="og:type" content="article">
@@ -466,9 +466,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-JAVA base64加密解密工具类" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据库/mysql遇到的问题" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">JAVA base64加密解密工具类</h1>
+        <h1 class="article-title">mysql遇到的问题 以及解决方法</h1>
     
     <div class="article-meta">
         
@@ -478,7 +478,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="后端">后端</a>
+            <a  data-rel="数据库">数据库</a>
             
         </span>
         
@@ -486,7 +486,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-06-02 15:56:14'>2023-05-30 17:42</time>
+            发布时间 : <time class="date" title='最后更新: 2023-06-09 09:50:11'>2023-06-09 09:19</time>
         
     </div>
     <div class="article-meta">
@@ -535,34 +535,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.system.labor.utils.pwdjiami;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.security.Key;</span><br><span class="line"><span class="keyword">import</span> java.security.SecureRandom;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.KeyGenerator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sun.misc.BASE64Decoder;</span><br><span class="line"><span class="keyword">import</span> sun.misc.BASE64Encoder;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DesUtil</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Key key;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String KEY_STR=<span class="string">&quot;myKey&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String CHARSETNAME=<span class="string">&quot;UTF-8&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String ALGORITHM=<span class="string">&quot;DES&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//生成DES算法对象</span></span><br><span class="line">            KeyGenerator generator= KeyGenerator.getInstance(ALGORITHM);</span><br><span class="line">            <span class="comment">//运用SHA1安全策略</span></span><br><span class="line">            SecureRandom secureRandom= SecureRandom.getInstance(<span class="string">&quot;SHA1PRNG&quot;</span>);</span><br><span class="line">            <span class="comment">//设置上密钥种子</span></span><br><span class="line">            secureRandom.setSeed(KEY_STR.getBytes());</span><br><span class="line">            <span class="comment">//初始化基于SHA1的算法对象</span></span><br><span class="line">            generator.init(secureRandom);</span><br><span class="line">            <span class="comment">//生成密钥对象</span></span><br><span class="line">            key=generator.generateKey();</span><br><span class="line">            generator=<span class="literal">null</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/***</span></span><br><span class="line"><span class="comment">     * 获取加密的信息</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> str</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getEncryptString</span><span class="params">(String str)</span> &#123;</span><br><span class="line">        <span class="comment">//基于BASE64编码，接收byte[]并转换成String</span></span><br><span class="line">        <span class="type">BASE64Encoder</span> <span class="variable">encoder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BASE64Encoder</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//按utf8编码</span></span><br><span class="line">            <span class="type">byte</span>[] bytes = str.getBytes(CHARSETNAME);</span><br><span class="line">            <span class="comment">//获取加密对象</span></span><br><span class="line">            <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(ALGORITHM);</span><br><span class="line">            <span class="comment">//初始化密码信息</span></span><br><span class="line">            cipher.init(Cipher.ENCRYPT_MODE, key);</span><br><span class="line">            <span class="comment">//加密</span></span><br><span class="line">            <span class="type">byte</span>[] doFinal = cipher.doFinal(bytes);</span><br><span class="line">            <span class="comment">//byte[]to encode好的String 并返回</span></span><br><span class="line">            <span class="keyword">return</span> encoder.encode(doFinal);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/***</span></span><br><span class="line"><span class="comment">     * 获取解密之后的信息</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> str</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getDecryptString</span><span class="params">(String str)</span> &#123;</span><br><span class="line">        <span class="type">BASE64Decoder</span> <span class="variable">decoder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BASE64Decoder</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//将字符串decode成byte[]</span></span><br><span class="line">            <span class="type">byte</span>[] bytes = decoder.decodeBuffer(str);</span><br><span class="line">            <span class="comment">//获取解密对象</span></span><br><span class="line">            <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(ALGORITHM);</span><br><span class="line">            <span class="comment">//初始化解密信息</span></span><br><span class="line">            cipher.init(Cipher.DECRYPT_MODE, key);</span><br><span class="line">            <span class="comment">//解密</span></span><br><span class="line">            <span class="type">byte</span>[] doFial = cipher.doFinal(bytes);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(doFial, CHARSETNAME);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <p><strong>问题1：MySQL    数据库的my.ini 中max_allowed_packet参数值过小文件值过大</strong>  </p>
+<p>解决：去my.ini 中修改max_allowed_packet其值   修改成  1024×1024×1024</p>
+<p><strong>问题2：mysql 5.7.5版本之后的GROUP by  严谨的问题</strong></p>
+<p>解决： 修改  my.ini 文件的sql_code 参数为  STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION<br>然后重启</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1942511725@qq.com </span>
